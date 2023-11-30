@@ -71,7 +71,7 @@ pub fn (tw TailWind) open() ! {
 	cmd := '
 		source ${osal.profile_path()} //source the go path
 		cd ${tw.path.path}
-		tailwind -i input.css -o output.css
+		tailwind -i input.css -o output.css --minify
 		open index.html
 		'
 	osal.exec(cmd: cmd)!

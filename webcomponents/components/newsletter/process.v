@@ -20,7 +20,7 @@ pub fn process(txt string) !string {
 	return ''
 }
 
-pub fn process_from_model(d Newsletter) !string {
-	r = $tmpl('templates/newsletter.html')
+pub fn process_from_model(d NewsLetter) !string {
+	r := $tmpl('templates/newsletter.html')
 	return r
 }

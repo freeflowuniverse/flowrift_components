@@ -2,12 +2,16 @@ module webcomponents
 
 // import freeflowuniverse.flowrift.components.stars
 import freeflowuniverse.webcomponents.components.reviews
+import freeflowuniverse.webcomponents.components.newsletter
+import freeflowuniverse.webcomponents.components.stars
 import freeflowuniverse.webcomponents.tailwind
 
 fn do_all(c string) !string {
 	mut out_ := []string{}
 	// out<<stars.process(c)!
 	out_ << reviews.process(c)!
+	out_ << stars.process(c)!
+	out_ << newsletter.process(c)!
 
 	// remove all empty
 	mut out := []string{}
