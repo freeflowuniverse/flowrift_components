@@ -17,8 +17,8 @@ requirements
 ```bash
 mkdir -p ~/code/github/freeflowuniverse
 cd ~/code/github/freeflowuniverse
-git clone git@github.com:freeflowuniverse/flowrift_components.git
-cd flowrift_components
+git clone git@github.com:freeflowuniverse/webcomponents.git
+cd webcomponents
 # checkout a branch with most recent changes
 # git checkout development 
 bash install.sh
