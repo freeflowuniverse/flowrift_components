@@ -2,8 +2,9 @@
 ## example of reviews
 
 
-to test, make sure V has been installed properly
+- to test, make sure V & crystal lib has been installed properly
+- also execute install.sh in this repo
 
 ```bash
-vrun ~/code/github/freeflowuniverse/flowrift_components/examples/reviews/reviews.v
+vrun ~/code/github/freeflowuniverse/webcomponents/examples/reviews/reviews.v
 ```
