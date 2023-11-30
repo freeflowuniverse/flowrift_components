@@ -43,7 +43,7 @@ pub fn example_data() string {
 		description:'${t}'
 
 	!!flowrift.review
-		name:'Kate Berg'
+		name:'Mr Mumba'
 		date:'28/8/2021'
 		stars:4
 		description:'${t}'	
