@@ -1,10 +1,10 @@
-import freeflowuniverse.flowrift.components.reviews
-import freeflowuniverse.flowrift
+import freeflowuniverse.webcomponents.components.reviews
+import freeflowuniverse.webcomponents
 
 fn do()! {
 
 	//will open html page and show result
-	flowrift.html(
+	webcomponents.html(
 		site_name:"test"
 		html_name:"index"
 		markdown:reviews.example_data()

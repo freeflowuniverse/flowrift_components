@@ -4,7 +4,7 @@ set -ex
 rm -rf _docs
 rm -rf docs
 
-cd flowrift
+cd webcomponents
 
 v fmt -w .
 v doc -m -f html . -readme -comments -no-timestamp -o ../
