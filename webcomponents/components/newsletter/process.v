@@ -1,16 +1,14 @@
-module reviews
+module newsletter
 
 import freeflowuniverse.crystallib.data.actionparser
-import freeflowuniverse.crystallib.data.ourtime
-import freeflowuniverse.webcomponents.components.stars
 
 const actor = 'flowrift'
 
 pub fn process(txt string) !string {
 	actions := actionparser.parse_collection(text: txt)!
 
-	if actions.exists_once(actor: reviews.actor, name: 'newsletter') {
-		a := actions.get(actor: reviews.actor, name: 'newsletter')!
+	if actions.exists_once(actor: newsletter.actor, name: 'newsletter') {
+		a := actions.get(actor: newsletter.actor, name: 'newsletter')!
 		mut d := NewsLetter{
 			description: a.params.get_default('description', 'Get the latest updates')!
 			signup : a.params.get_default('signup', 'Sign up for our newsletter')!
@@ -22,7 +20,7 @@ pub fn process(txt string) !string {
 	return ''
 }
 
-pub fn process_from_model(d Reviews) !string {
+pub fn process_from_model(d Newsletter) !string {
 	r = $tmpl('templates/newsletter.html')
 	return r
 }

@@ -58,6 +58,7 @@ pub fn new(args TailWindArgs) !TailWind {
 // generate the html and open in browser
 pub fn (tw TailWind) compile() ! {
 	cmd := '
+		source ${osal.profile_path()} //source the go path
 		cd ${tw.path.path}
 		tailwind -i input.css -o output.css
 		'
@@ -68,6 +69,7 @@ pub fn (tw TailWind) compile() ! {
 // generate the html and open in browser
 pub fn (tw TailWind) open() ! {
 	cmd := '
+		source ${osal.profile_path()} //source the go path
 		cd ${tw.path.path}
 		tailwind -i input.css -o output.css
 		open index.html

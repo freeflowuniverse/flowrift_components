@@ -1,4 +1,4 @@
-module reviews
+module newsletter
 
 import freeflowuniverse.crystallib.core.texttools
 
