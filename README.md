@@ -1,12 +1,34 @@
+# Web Components
 
+Web Components in V that can be rendered into HTML, for use in MDBook and Zola Static sites.
+The end goal is to easily and readably go from Markdown (using 3Script) to rendered web components.
 
+For example:
+```
+## People
 
-## Get started with flowrift
+Below is a component that shows our team.
 
+!!!webcomponents.people
+title: 'Our Team'
+description: 'The group of people we work with'
+
+!!! webcomponents.person
+name: 'John Doe'
+description: 'A team member of our team' 
+...
+```
+
+Will render into an html template that shows a team section with cards for each team member.
+
+## Get started with Webcomponents
 
 requirements
 
 - ssh key loaded for access to github
+- v installed
+- [crystallib:development_db](https://github.com/freeflowuniverse/crystallib/tree/development_db) linked to .vmodules (see crystallib installation instructions)
+
 
 ### alternative with manual git checkout & v install
 
@@ -30,22 +52,24 @@ bash install.sh
 
 > todo: there is some content underneath manual, but we are in process to use hero to generate mdbook. Stay tuned.
 
-
 ## generating docs
+
+**You can skip generating docs for now, this part is under development.**
 
 ```bash
 #cd in this directory
-cd ~/code/github/freeflowuniverse/flowrift
+cd ~/code/github/freeflowuniverse/webcomponents
 bash doc.sh
 ```
 
-
 ## Install Hero
+
+**You can skip installing hero for now, this part is under development.**
 
 hero is our "hero" tool to execute 3script, deal with git, ...
 
 ```bash
-curl https://raw.githubusercontent.com/freeflowuniverse/flowrift/development/scripts/hero_install.sh > /tmp/hero_install.sh
+curl https://raw.githubusercontent.com/freeflowuniverse/webcomponents/development/scripts/hero_install.sh > /tmp/hero_install.sh
 bash /tmp/hero_install.sh
 ```
 
@@ -56,13 +80,15 @@ requirements
 #### to compile
 
 ```bash
-bash ~/code/github/freeflowuniverse/flowrift/cli/hero/compile.sh
+bash ~/code/github/freeflowuniverse/webcomponents/cli/hero/compile.sh
 ```
 
 ## test your code before checking in
 
+**You can skip testing for now, this part is under development.**
+
 ```bash
-cd ~/code/github/freeflowuniverse/flowrift
+cd ~/code/github/freeflowuniverse/webcomponents
 bash test.sh
 ```
 
