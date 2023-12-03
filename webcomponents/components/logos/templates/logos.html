@@ -1,0 +1,15 @@
+<div class="bg-white py-6 sm:py-8 lg:py-12">
+  <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+    <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl">@component.title</h2>
+
+    <div class="grid grid-cols-2 gap-6 rounded-lg bg-gray-100 p-6 sm:h-40 sm:content-evenly md:grid-cols-4">
+      @for logo in component.logos
+      <!-- logo - start -->
+      <div class="flex justify-center text-gray-400">
+        <img src="@logo.img" class="class="h-6 w-auto sm:h-8 lg:h-10" width="154" height="39">
+      </div>
+      <!-- logo - end -->
+      @end
+    </div>
+  </div>
+</div>

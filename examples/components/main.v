@@ -2,6 +2,7 @@ import freeflowuniverse.webcomponents.components.features
 import freeflowuniverse.webcomponents.components.banner
 import freeflowuniverse.webcomponents.components.hero
 import freeflowuniverse.webcomponents.components.cta
+import freeflowuniverse.webcomponents.components.logos
 import vweb
 
 // ComponentsApp is a VWeb application that displays rendered components
@@ -23,6 +24,7 @@ pub fn main() {
 			hero.Hero{},
 			features.Features{},
 			cta.CTA{},
+			logos.Logos{},
 		]
 	}
 
