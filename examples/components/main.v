@@ -2,6 +2,7 @@ import freeflowuniverse.webcomponents.components.features
 import freeflowuniverse.webcomponents.components.banner
 import freeflowuniverse.webcomponents.components.hero
 import freeflowuniverse.webcomponents.components.cta
+import freeflowuniverse.webcomponents.components.teams
 import freeflowuniverse.webcomponents.components.logos
 import vweb
 
@@ -25,6 +26,8 @@ pub fn main() {
 			features.Features{},
 			cta.CTA{},
 			logos.Logos{},
+			teams.Teams{},
+
 		]
 	}
 
