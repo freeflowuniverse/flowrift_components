@@ -1,5 +1,6 @@
 import freeflowuniverse.webcomponents.components.features
 import freeflowuniverse.webcomponents.components.banner
+import freeflowuniverse.webcomponents.components.hero
 import vweb
 
 // ComponentsApp is a VWeb application that displays rendered components
@@ -17,6 +18,7 @@ pub interface IComponent {
 pub fn main() {
 	app := ComponentsApp{
 		components: [
+			hero.Hero{},
 			features.Features{},
 			banner.Banner{},
 		]
