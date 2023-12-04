@@ -1,5 +1,4 @@
-import freeflowuniverse.webcomponents.components.features
-import freeflowuniverse.webcomponents.components.newsletter
+import freeflowuniverse.webcomponents.components.banner
 import freeflowuniverse.webcomponents
 
 fn do() ! {
@@ -7,7 +6,7 @@ fn do() ! {
 	webcomponents.html(
 		site_name: 'test'
 		html_name: 'index'
-		markdown: features.example_data()
+		markdown: banner.example_data()
 		open: true
 	)!
 }

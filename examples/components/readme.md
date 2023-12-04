@@ -1,6 +1,8 @@
-to run:
 
+required vmodules: 
 - freeflowuniverse/webcomponents & freeflowuniverse/crystallib:development_db
+
+to run:
 
 ```
 cd .vmodules

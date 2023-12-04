@@ -4,7 +4,9 @@ module webcomponents
 import freeflowuniverse.webcomponents.components.reviews
 import freeflowuniverse.webcomponents.components.features
 import freeflowuniverse.webcomponents.components.newsletter
+import freeflowuniverse.webcomponents.components.cta
 import freeflowuniverse.webcomponents.components.stars
+import freeflowuniverse.webcomponents.components.banner
 import freeflowuniverse.webcomponents.tailwind
 
 fn do_all(c string) !string {
@@ -14,6 +16,8 @@ fn do_all(c string) !string {
 	out_ << features.process(c)!
 	out_ << stars.process(c)!
 	out_ << newsletter.process(c)!
+	out_ << cta.process(c)!
+	out_ << banner.process(c)!
 
 	// remove all empty
 	mut out := []string{}

@@ -27,7 +27,6 @@ pub fn main() {
 			cta.CTA{},
 			logos.Logos{},
 			teams.Teams{},
-
 		]
 	}
 
