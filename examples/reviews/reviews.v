@@ -5,18 +5,19 @@ import freeflowuniverse.webcomponents
 
 fn do() ! {
 	// will open html page and show result
-	// webcomponents.html(
-	// 	site_name:"test"
-	// 	html_name:"index"
-	// 	markdown:reviews.example_data()
-	// 	open:true
-	// )!
+	println(' reviews.example_data():: ${reviews.example_data()}')
 	webcomponents.html(
 		site_name: 'test'
 		html_name: 'index'
-		markdown: newsletter.example_data()
+		markdown: reviews.example_data()
 		open: true
 	)!
+	// webcomponents.html(
+	// 	site_name: 'test'
+	// 	html_name: 'index'
+	// 	markdown: newsletter.example_data()
+	// 	open: true
+	// )!
 
 	// webcomponents.html(
 	// 	site_name:"test"
