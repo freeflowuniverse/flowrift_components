@@ -4,6 +4,9 @@ import freeflowuniverse.webcomponents.components.hero
 import freeflowuniverse.webcomponents.components.cta
 import freeflowuniverse.webcomponents.components.teams
 import freeflowuniverse.webcomponents.components.logos
+import freeflowuniverse.webcomponents.components.blogs
+import freeflowuniverse.webcomponents.components.collections
+import freeflowuniverse.webcomponents.components.faqs
 import vweb
 
 // ComponentsApp is a VWeb application that displays rendered components
@@ -27,6 +30,9 @@ pub fn main() {
 			cta.CTA{},
 			logos.Logos{},
 			teams.Teams{},
+			blogs.Blogs{},
+			collections.Collections{},
+			faqs.FAQs{},
 		]
 	}
 
