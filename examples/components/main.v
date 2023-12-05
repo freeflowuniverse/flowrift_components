@@ -8,6 +8,8 @@ import freeflowuniverse.webcomponents.components.blogs
 import freeflowuniverse.webcomponents.components.collections
 import freeflowuniverse.webcomponents.components.faqs
 import freeflowuniverse.webcomponents.components.navigations
+import freeflowuniverse.webcomponents.components.footer
+import freeflowuniverse.webcomponents.components.form
 import vweb
 
 // ComponentsApp is a VWeb application that displays rendered components
@@ -35,6 +37,8 @@ pub fn main() {
 			blogs.Blogs{},
 			collections.Collections{},
 			faqs.FAQs{},
+			form.Form{},
+			footer.Footer{},
 		]
 	}
 
