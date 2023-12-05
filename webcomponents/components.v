@@ -2,6 +2,7 @@ module webcomponents
 
 // import freeflowuniverse.flowrift.components.stars
 import freeflowuniverse.webcomponents.components.reviews
+import freeflowuniverse.webcomponents.components.hero
 import freeflowuniverse.webcomponents.components.features
 import freeflowuniverse.webcomponents.components.newsletter
 import freeflowuniverse.webcomponents.components.cta
@@ -18,6 +19,7 @@ fn do_all(c string) !string {
 	out_ << newsletter.process(c)!
 	out_ << cta.process(c)!
 	out_ << banner.process(c)!
+	out_ << hero.process(c)!
 
 	// remove all empty
 	mut out := []string{}
