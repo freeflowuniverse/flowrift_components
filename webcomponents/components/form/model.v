@@ -2,39 +2,37 @@ module form
 
 pub struct Form {
 pub:
-	title       string = 'Get in touch'
-	description string = 'This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.'
-	names       []Data = [
-		Data{
+	title       string  = 'Get in touch'
+	description string  = 'This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.'
+	inputs      []Input = [
+		Input{
 			label: 'First name'
 			id: 'first-name'
 		},
-		Data{
+		Input{
 			label: 'Last name'
 			id: 'last-name'
 		},
-	]
-	data []Data = [
-		Data{
+		Input{
 			label: 'Company'
 			id: 'company'
 		},
-		Data{
+		Input{
 			label: 'Email'
 			id: 'email'
 		},
-		Data{
+		Input{
 			label: 'Subject'
 			id: 'subject'
 		},
 	]
-	message Data = Data{
+	message Input = Input{
 		label: 'Message'
 		id: 'message'
 	}
 }
 
-pub struct Data {
+pub struct Input {
 pub:
 	label string
 	id    string
