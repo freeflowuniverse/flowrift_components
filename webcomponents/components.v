@@ -8,6 +8,7 @@ import freeflowuniverse.webcomponents.components.newsletter
 import freeflowuniverse.webcomponents.components.cta
 import freeflowuniverse.webcomponents.components.stars
 import freeflowuniverse.webcomponents.components.banner
+import freeflowuniverse.webcomponents.components.form.contact
 import freeflowuniverse.webcomponents.tailwind
 
 fn do_all(c string) !string {
@@ -20,6 +21,7 @@ fn do_all(c string) !string {
 	out_ << cta.process(c)!
 	out_ << banner.process(c)!
 	out_ << hero.process(c)!
+	out_ << contact.process(c)!
 
 	// remove all empty
 	mut out := []string{}

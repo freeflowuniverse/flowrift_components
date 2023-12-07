@@ -3,6 +3,7 @@ module preprocessor
 import freeflowuniverse.webcomponents
 import freeflowuniverse.webcomponents.components.reviews
 import freeflowuniverse.webcomponents.components.hero
+import freeflowuniverse.webcomponents.components.form.contact
 import freeflowuniverse.webcomponents.components.cta
 import freeflowuniverse.crystallib.core.pathlib
 
@@ -30,7 +31,7 @@ pub fn preprocess_file(mut file pathlib.Path) ! {
 		line := line_.trim_left('\n')
 
 		if in_action {
-			if line != '' {
+			if line != '' && i != lines.len-1 {
 				continue
 			}
 			// means action declaration is over
@@ -43,6 +44,9 @@ pub fn preprocess_file(mut file pathlib.Path) ! {
 				}
 				'cta' {
 					processed << cta.process(lines[action_begin..].join('\n'))!
+				}
+				'form_contact' {
+					processed << contact.process(lines[action_begin..].join('\n'))!
 				}
 				else {} // do nothing with actions that arent macros
 			}

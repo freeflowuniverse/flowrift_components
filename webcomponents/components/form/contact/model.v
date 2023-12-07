@@ -1,6 +1,6 @@
-module form
+module contact
 
-pub struct Form {
+pub struct ContactForm {
 pub:
 title       string = 'Get in touch'
 description string = 'This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.'
@@ -41,6 +41,6 @@ pub:
 	id    string
 }
 
-pub fn (component Form) html() string {
+pub fn (component ContactForm) html() string {
 return $tmpl('./templates/form.html')
 }
