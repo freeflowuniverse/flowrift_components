@@ -10,6 +10,7 @@ import freeflowuniverse.webcomponents.components.faqs
 import freeflowuniverse.webcomponents.components.navigations
 import freeflowuniverse.webcomponents.components.footer
 import freeflowuniverse.webcomponents.components.form
+import freeflowuniverse.webcomponents.components.signup
 import vweb
 
 // ComponentsApp is a VWeb application that displays rendered components
@@ -38,6 +39,7 @@ pub fn main() {
 			collections.Collections{},
 			faqs.FAQs{},
 			form.Form{},
+			signup.Signup{},
 			footer.Footer{},
 		]
 	}
