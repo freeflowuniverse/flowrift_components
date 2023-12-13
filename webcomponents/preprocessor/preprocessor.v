@@ -18,7 +18,6 @@ pub fn preprocess(path_ string) ! {
 }
 
 pub fn preprocess_file(mut file pathlib.Path) ! {
-	println('preprocessing file: ${file}')
 	content := file.read()!
 
 	mut macro := '' // the name of the macro being parsed
