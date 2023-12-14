@@ -2,6 +2,7 @@ module newsletter
 
 import freeflowuniverse.crystallib.data.ourtime
 
+
 pub struct NewsLetter {
 pub:
 	description        string
