@@ -6,6 +6,7 @@ pub struct Image {
 pub mut:
 	name string
 	path string
+	color string	
 }
 
 [params]
@@ -18,7 +19,7 @@ pub mut:
 pub fn new(args ImageNewArgs) !Image{
 
 	mut i:=Image{
-		path=args.path
+		path:args.path
 	}
 
 	return r

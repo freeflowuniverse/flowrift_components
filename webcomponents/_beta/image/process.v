@@ -1,17 +1,13 @@
 module image
 import freeflowuniverse.crystallib.data.actionparser
 
-pub struct Image {
-pub:
-	color string
-}
 
 const actor="flowrift"
 
-pub fn get(total int, nr int) !string {
-	t := $tmpl('images.html')
-	return t
-}
+// pub fn get(total int, nr int) !string {
+// 	t := $tmpl('images.html')
+// 	return t
+// }
 
 
 pub fn process(txt string) !string {
