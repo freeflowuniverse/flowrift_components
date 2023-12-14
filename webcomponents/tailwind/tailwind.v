@@ -36,7 +36,7 @@ pub:
 
 // generate the html and open in browser
 pub fn new(args TailWindArgs) !TailWind {
-	tailwindinstaller.install()!
+	// tailwindinstaller.install()!
 
 	mut p := pathlib.get_dir(path: '/tmp/flowrift/${args.name}', create: true)!
 	mut tw := TailWind{
@@ -57,8 +57,9 @@ pub fn new(args TailWindArgs) !TailWind {
 
 // generate the html and open in browser
 pub fn (tw TailWind) compile() ! {
+	// source the go path
 	cmd := '
-		source ${osal.profile_path()} //source the go path
+		source ${osal.profile_path()}
 		cd ${tw.path.path}
 		tailwind -i input.css -o output.css
 		'
@@ -68,8 +69,9 @@ pub fn (tw TailWind) compile() ! {
 
 // generate the html and open in browser
 pub fn (tw TailWind) open() ! {
+	// source the go path
 	cmd := '
-		source ${osal.profile_path()} //source the go path
+		source ${osal.profile_path()}
 		cd ${tw.path.path}
 		tailwind -i input.css -o output.css --minify
 		open index.html
