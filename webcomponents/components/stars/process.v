@@ -1,5 +1,5 @@
 module stars
-import freeflowuniverse.crystallib.data.actionparser
+import freeflowuniverse.crystallib.core.playbook
 
 pub struct Stars {
 pub:
@@ -38,10 +38,10 @@ pub fn get(total int, nr int) !string {
 
 
 pub fn process(txt string) !string {
-	actions := actionparser.parse_collection(text: txt)!
+	mut plbook := playbook.new(text: txt)!
 
-	if actions.exists_once(actor: stars.actor, name: 'stars') {
-		a := actions.get(actor: stars.actor, name: 'stars')!
+	if plbook.action_exists_once(actor: stars.actor, name: 'stars') {
+		a := plbook.action_get_by_name(actor: stars.actor, name: 'stars')!
 		mut d := Stars{
 			total: a.params.get_int_default("total",5)!
 			stars: a.params.get_int_default("stars",3)!

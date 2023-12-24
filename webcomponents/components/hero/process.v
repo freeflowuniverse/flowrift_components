@@ -1,14 +1,14 @@
 module hero
 
-import freeflowuniverse.crystallib.data.actionparser
+import freeflowuniverse.crystallib.core.playbook
 
 const actor = 'flowrift'
 
 pub fn process(txt string) !string {
-	actions := actionparser.parse_collection(text: txt)!
+	mut plbook := playbook.new(text: txt)!
 
-	if actions.exists_once(actor: hero.actor, name: 'hero') {
-		a := actions.get(actor: hero.actor, name: 'hero')!
+	if plbook.action_exists_once(actor: hero.actor, name: 'hero') {
+		a := plbook.action_get_by_name(actor: hero.actor, name: 'hero')!
 		mut d := a.params.decode[Hero]()!
 		return process_from_model(d)!
 	}

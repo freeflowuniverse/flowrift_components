@@ -1,16 +1,16 @@
 module banner
 
-import freeflowuniverse.crystallib.data.actionparser
+import freeflowuniverse.crystallib.core.playbook
 import freeflowuniverse.crystallib.data.ourtime
 import freeflowuniverse.webcomponents.components.stars
 
 const actor = 'flowrift'
 
 pub fn process(txt string) !string {
-	actions := actionparser.parse_collection(text: txt)!
+	mut plbook := playbook.new(text: txt)!
 
-	if actions.exists_once(actor: banner.actor, name: 'banner') {
-		a := actions.get(actor: banner.actor, name: 'banner')!
+	if plbook.action_exists_once(actor: banner.actor, name: 'banner') {
+		a := plbook.action_get_by_name(actor: banner.actor, name: 'banner')!
 		mut d := a.params.decode[Banner]()!
 		return process_from_model(d)!
 	}

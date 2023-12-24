@@ -1,5 +1,5 @@
 module image
-import freeflowuniverse.crystallib.data.actionparser
+import freeflowuniverse.crystallib.core.playbook
 
 
 const actor="flowrift"
@@ -11,7 +11,7 @@ const actor="flowrift"
 
 
 pub fn process(txt string) !string {
-	actions := actionparser.parse_collection(text: txt)!
+	actions := playbook.new(text: txt)!
 
 	if actions.exists_once(actor: images.actor, name: 'images') {
 		a := actions.get(actor: images.actor, name: 'images')!

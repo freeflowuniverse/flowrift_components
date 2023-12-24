@@ -13,7 +13,7 @@ pub fn example_data() string {
 		image: 'https://images.unsplash.com/photo-1505846951821-e25bacf2eccd?auto=format&q=75&fit=crop&crop=top&w=1000&h=500'
 	"
 
-	return texttools.dedent(c) // important to allways dedent, otherwise actionparser will not work
+	return texttools.dedent(c) // important to allways dedent, otherwise playbook will not work
 }
 
 pub fn example() !string {

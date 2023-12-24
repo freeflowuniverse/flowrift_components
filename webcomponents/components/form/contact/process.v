@@ -1,16 +1,16 @@
 module contact
 
-import freeflowuniverse.crystallib.data.actionparser
+import freeflowuniverse.crystallib.core.playbook
 import freeflowuniverse.crystallib.data.ourtime
 import freeflowuniverse.webcomponents.components.stars
 
 const actor = 'flowrift'
 
 pub fn process(txt string) !string {
-	actions := actionparser.parse_collection(text: txt)!
+	mut plbook := playbook.new(text: txt)!
 
-	if actions.exists_once(actor: contact.actor, name: 'form_contact') {
-		a := actions.get(actor: contact.actor, name: 'form_contact')!
+	if plbook.action_exists_once(actor: contact.actor, name: 'form_contact') {
+		a := plbook.action_get_by_name(actor: contact.actor, name: 'form_contact')!
 		mut d := a.params.decode[ContactForm]()!
 		return process_from_model(d)!
 	}

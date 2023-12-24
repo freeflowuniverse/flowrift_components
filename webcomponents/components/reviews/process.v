@@ -1,16 +1,16 @@
 module reviews
 
-import freeflowuniverse.crystallib.data.actionparser
+import freeflowuniverse.crystallib.core.playbook
 import freeflowuniverse.crystallib.data.ourtime
 import freeflowuniverse.webcomponents.components.stars
 
 const actor = 'flowrift'
 
 pub fn process(txt string) !string {
-	actions := actionparser.parse_collection(text: txt)!
+	mut plbook := playbook.new(text: txt)!
 
-	if actions.exists_once(actor: reviews.actor, name: 'reviews') {
-		a := actions.get(actor: reviews.actor, name: 'reviews')!
+	if plbook.action_exists_once(actor: reviews.actor, name: 'reviews') {
+		a := plbook.action_get_by_name(actor: reviews.actor, name: 'reviews')!
 
 		mut mode := a.params.get_default('mode', 'horizontal')!
 		mode = mode.to_lower()
@@ -37,7 +37,7 @@ pub fn process(txt string) !string {
 			mode: mode_enum
 		}
 
-		for item in actions.find(actor: reviews.actor, name: 'review') {
+		for item in plbook.find_by_name(actor: reviews.actor, name: 'review')! {
 			item_date := item.params.get_time('date') or { ourtime.OurTime{} } // if no date then empty date
 			nrstars := item.params.get_int_default('stars', 5)!
 			stars_str := stars.get(d.stars_total, nrstars)!

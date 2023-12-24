@@ -10,7 +10,7 @@ pub fn example_data() string {
 		post_url: 'https://denismukwege2023.com/index.php/contact'
 	"
 
-	return texttools.dedent(c) // important to allways dedent, otherwise actionparser will not work
+	return texttools.dedent(c) // important to allways dedent, otherwise playbook will not work
 }
 
 pub fn example() !string {

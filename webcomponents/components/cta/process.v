@@ -1,16 +1,16 @@
 module cta
 
-import freeflowuniverse.crystallib.data.actionparser
-import freeflowuniverse.crystallib.data.ourtime
-import freeflowuniverse.webcomponents.components.stars
+import freeflowuniverse.crystallib.core.playbook
+// import freeflowuniverse.crystallib.data.ourtime
+// import freeflowuniverse.webcomponents.components.stars
 
 const actor = 'flowrift'
 
 pub fn process(txt string) !string {
-	actions := actionparser.parse_collection(text: txt)!
+	mut plbook := playbook.new(text: txt)!
 
-	if actions.exists_once(actor: cta.actor, name: 'cta') {
-		a := actions.get(actor: cta.actor, name: 'cta')!
+	if plbook.action_exists_once(actor: cta.actor, name: 'cta') {
+		a := plbook.action_get_by_name(actor: cta.actor, name: 'cta')!
 		mut d := a.params.decode[CTA]()!
 		return process_from_model(d)!
 	}

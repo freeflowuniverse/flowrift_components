@@ -10,7 +10,7 @@ pub fn example_data() string {
 		button_url: '/redirect'
 	"
 
-	return texttools.dedent(c) // important to allways dedent, otherwise actionparser will not work
+	return texttools.dedent(c) // important to allways dedent, otherwise playbook will not work
 }
 
 pub fn example() !string {

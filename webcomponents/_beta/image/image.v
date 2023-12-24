@@ -1,5 +1,5 @@
 module image
-import freeflowuniverse.crystallib.data.actionparser
+import freeflowuniverse.crystallib.core.playbook
 import freeflowuniverse.crystallib.core.pathlib
 
 pub struct Image {

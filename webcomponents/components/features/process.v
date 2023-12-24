@@ -1,16 +1,16 @@
 module features
 
-import freeflowuniverse.crystallib.data.actionparser
+import freeflowuniverse.crystallib.core.playbook
 import freeflowuniverse.crystallib.data.ourtime
 import freeflowuniverse.webcomponents.components.stars
 
 const actor = 'flowrift'
 
 pub fn process(txt string) !string {
-	actions := actionparser.parse_collection(text: txt)!
+	mut plbook := playbook.new(text: txt)!
 
-	if actions.exists_once(actor: features.actor, name: 'features') {
-		a := actions.get(actor: features.actor, name: 'features')!
+	if plbook.action_exists_once(actor: features.actor, name: 'features') {
+		a := plbook.action_get_by_name(actor: features.actor, name: 'features')!
 		description := a.params.get_default('description', 'Default description')!
 		// stars_str0 := stars.get(stars_tot, stars_avg)!
 		mut d := Features{
@@ -18,7 +18,7 @@ pub fn process(txt string) !string {
 			description: a.params.get('description')!
 		}
 
-		for item in actions.find(actor: features.actor, name: 'review') {
+		for item in plbook.find_by_name(actor: features.actor, name: 'review')! {
 			// item_date := item.params.get_time('date') or { ourtime.OurTime{} } // if no date then empty date
 			// nrstars := item.params.get_int_default('stars', 5)!
 			// stars_str := stars.get(d.stars_total, nrstars)!
