@@ -18,7 +18,7 @@ pub fn process(txt string) !string {
 			description: a.params.get('description')!
 		}
 
-		for item in plbook.find_by_name(actor: features.actor, name: 'review')! {
+		for item in plbook.actions_find_by_name(actor: features.actor, name: 'review')! {
 			// item_date := item.params.get_time('date') or { ourtime.OurTime{} } // if no date then empty date
 			// nrstars := item.params.get_int_default('stars', 5)!
 			// stars_str := stars.get(d.stars_total, nrstars)!

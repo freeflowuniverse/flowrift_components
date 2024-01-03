@@ -1,8 +1,8 @@
 module banner
 
 import freeflowuniverse.crystallib.core.playbook
-import freeflowuniverse.crystallib.data.ourtime
-import freeflowuniverse.webcomponents.components.stars
+// import freeflowuniverse.crystallib.data.ourtime
+// import freeflowuniverse.webcomponents.components.stars
 
 const actor = 'flowrift'
 
