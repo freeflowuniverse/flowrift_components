@@ -1,6 +1,5 @@
 module tailwind
 
-import freeflowuniverse.crystallib.installers.tailwind as tailwindinstaller
 import freeflowuniverse.crystallib.core.pathlib
 import freeflowuniverse.crystallib.osal
 
