@@ -31,7 +31,7 @@ pub fn (mut tw TailWind) add(args AddArgs) ! {
 @[params]
 pub struct TailWindArgs {
 pub:
-	name string = 'test'
+	name string = 'default'
 }
 
 // generate the html and open in browser
