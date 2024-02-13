@@ -1,14 +1,13 @@
 module image
+
 import freeflowuniverse.crystallib.core.playbook
 
-
-const actor="flowrift"
+const actor = 'flowrift'
 
 // pub fn get(total int, nr int) !string {
 // 	t := $tmpl('images.html')
 // 	return t
 // }
-
 
 pub fn process(txt string) !string {
 	actions := playbook.new(text: txt)!
@@ -16,8 +15,8 @@ pub fn process(txt string) !string {
 	if actions.exists_once(actor: images.actor, name: 'images') {
 		a := actions.get(actor: images.actor, name: 'images')!
 		mut d := Images{
-			total: a.params.get_int_default("total",5)!
-			images: a.params.get_int_default("images",3)!
+			total: a.params.get_int_default('total', 5)!
+			images: a.params.get_int_default('images', 3)!
 		}
 		return process_from_model(d)!
 	}
@@ -25,6 +24,6 @@ pub fn process(txt string) !string {
 }
 
 pub fn process_from_model(d Images) !string {
-	r:=get(d.total,d.images)!
+	r := get(d.total, d.images)!
 	return r
 }

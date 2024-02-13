@@ -16,18 +16,18 @@ description: 'The group of people we work with'
 !!! webcomponents.person
 name: 'John Doe'
 description: 'A team member of our team' 
-...
+
 ```
 
 Will render into an html template that shows a team section with cards for each team member.
 
-## Get started with Webcomponents
+```bash
+#rub example
+~/code/github/freeflowuniverse/webcomponents/examples/webcomponents/components_overview.vsh
+```
 
-requirements
+### to install follow instructions on crystallib
 
-- ssh key loaded for access to github
-- v installed
-- [crystallib:development_db](https://github.com/freeflowuniverse/crystallib/tree/development_db) linked to .vmodules (see crystallib installation instructions)
 
 
 ### alternative with manual git checkout & v install

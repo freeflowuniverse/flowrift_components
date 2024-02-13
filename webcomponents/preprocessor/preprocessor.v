@@ -30,7 +30,7 @@ pub fn preprocess_file(mut file pathlib.Path) ! {
 		line := line_.trim_left('\n')
 
 		if in_action {
-			if line != '' && i != lines.len-1 {
+			if line != '' && i != lines.len - 1 {
 				continue
 			}
 			// means action declaration is over
