@@ -71,6 +71,7 @@ pub:
 
 // generate the html and open in browser
 pub fn html(args HtmlOpenArgs) ! {
+	
 	htmltxt := do_all(args.markdown)!
 
 	mut tw := tailwind_new(name: args.site_name)!
