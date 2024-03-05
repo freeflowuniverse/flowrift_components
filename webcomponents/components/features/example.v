@@ -3,7 +3,6 @@ module features
 import freeflowuniverse.crystallib.core.texttools
 
 pub fn example_data() string {
-	t := 'This is a section of some simple filler text...'
 	c := '
 	!!flowrift.features
 		title: My features
