@@ -1,8 +1,6 @@
 module features
 
 import freeflowuniverse.crystallib.core.playbook
-import freeflowuniverse.crystallib.data.ourtime
-import freeflowuniverse.webcomponents.components.stars
 
 const actor = 'flowrift'
 
@@ -11,7 +9,6 @@ pub fn process(txt string) !string {
 
 	if plbook.action_exists_once(actor: features.actor, name: 'features') {
 		a := plbook.action_get_by_name(actor: features.actor, name: 'features')!
-		description := a.params.get_default('description', 'Default description')!
 		// stars_str0 := stars.get(stars_tot, stars_avg)!
 		mut d := Features{
 			title: a.params.get_default('title', 'Default title')!

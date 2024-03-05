@@ -1,12 +1,10 @@
 module newsletter
 
-import freeflowuniverse.crystallib.core.playbook
 // import freeflowuniverse.webcomponents.components.image
 
 const actor = 'flowrift'
 
 pub fn process(txt string) !string {
-	mut plbook := playbook.new(text: txt)!
 
 	// image_path:=a.params.get('image')!
 	// mut image:=image.new(path:image_path)!
