@@ -2,6 +2,7 @@ module preprocessor
 
 import freeflowuniverse.webcomponents
 import freeflowuniverse.webcomponents.components.reviews
+import freeflowuniverse.webcomponents.components.header
 import freeflowuniverse.webcomponents.components.hero
 import freeflowuniverse.webcomponents.components.form.contact
 import freeflowuniverse.webcomponents.components.cta
@@ -37,6 +38,9 @@ pub fn preprocess_file(mut file pathlib.Path) ! {
 			match macro {
 				'reviews' {
 					processed << reviews.process(lines[action_begin..].join('\n'))!
+				}
+				'header' {
+					processed << header.process(lines[action_begin..].join('\n'))!
 				}
 				'hero' {
 					processed << hero.process(lines[action_begin..].join('\n'))!
