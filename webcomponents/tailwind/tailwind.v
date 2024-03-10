@@ -1,5 +1,6 @@
 module tailwind
 
+import freeflowuniverse.crystallib.installers.web.tailwind as tailwindinstaller
 import freeflowuniverse.crystallib.core.pathlib
 import freeflowuniverse.crystallib.osal
 
@@ -30,12 +31,11 @@ pub fn (mut tw TailWind) add(args AddArgs) ! {
 @[params]
 pub struct TailWindArgs {
 pub:
-	name string = 'test'
+	name string = 'default'
 }
 
 // generate the html and open in browser
 pub fn new(args TailWindArgs) !TailWind {
-	// tailwindinstaller.install()!
 
 	mut p := pathlib.get_dir(path: '/tmp/flowrift/${args.name}', create: true)!
 	mut tw := TailWind{
@@ -60,7 +60,7 @@ pub fn (tw TailWind) compile() ! {
 	cmd := '
 		source ${osal.profile_path()}
 		cd ${tw.path.path}
-		tailwind -i input.css -o output.css
+		tailwind -i input.css -o output.css --minify
 		'
 
 	osal.exec(cmd: cmd)!
@@ -68,12 +68,6 @@ pub fn (tw TailWind) compile() ! {
 
 // generate the html and open in browser
 pub fn (tw TailWind) open() ! {
-	// source the go path
-	cmd := '
-		source ${osal.profile_path()}
-		cd ${tw.path.path}
-		tailwind -i input.css -o output.css --minify
-		open index.html
-		'
-	osal.exec(cmd: cmd)!
+	tw.compile()!
+	osal.exec(cmd: "cd ${tw.path.path} && open index.html")!
 }

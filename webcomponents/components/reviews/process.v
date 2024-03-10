@@ -67,5 +67,5 @@ pub fn process_from_model(d Reviews) !string {
 		panic('bug')
 	}
 
-	return r
+	return r.split_into_lines().filter(it.trim_space() != '').join_lines()
 }

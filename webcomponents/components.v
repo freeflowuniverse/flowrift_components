@@ -13,7 +13,6 @@ import freeflowuniverse.webcomponents.tailwind
 
 fn do_all(c string) !string {
 	mut out_ := []string{}
-	// out<<stars.process(c)!
 	out_ << reviews.process(c)!
 	out_ << features.process(c)!
 	out_ << stars.process(c)!
@@ -47,14 +46,13 @@ fn do_all(c string) !string {
 // process actions for a specific component
 pub fn html_get(c string) !string {
 	htmltxt := do_all(c)!
-
 	return htmltxt
 }
 
 @[params]
 pub struct TailWindArgs {
 pub:
-	name string = 'test'
+	name string = 'default'
 }
 
 pub fn tailwind_new(args TailWindArgs) !tailwind.TailWind {
@@ -73,6 +71,7 @@ pub:
 
 // generate the html and open in browser
 pub fn html(args HtmlOpenArgs) ! {
+	
 	htmltxt := do_all(args.markdown)!
 
 	mut tw := tailwind_new(name: args.site_name)!
