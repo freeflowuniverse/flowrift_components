@@ -26,7 +26,7 @@ pub fn (link LinkButton) html() string {
 	target := if link.new_tab {
 		'target="_blank"'
 	} else {''}
-	return '<a href="${link.url}" ${target} class="text-lg leading-6 font-medium text-gray-900 hover:text-gray-500 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150 mt-0">
+	return '<a href="/${link.url}" ${target} class="text-lg leading-6 font-medium text-gray-900 hover:text-gray-500 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150 mt-0">
 	${link.label}
 </a>'
 }

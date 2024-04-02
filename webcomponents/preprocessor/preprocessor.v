@@ -3,6 +3,7 @@ module preprocessor
 import freeflowuniverse.webcomponents
 import freeflowuniverse.webcomponents.components.reviews
 import freeflowuniverse.webcomponents.components.header
+import freeflowuniverse.webcomponents.components.footer
 import freeflowuniverse.webcomponents.components.hero
 import freeflowuniverse.webcomponents.components.form.contact
 import freeflowuniverse.webcomponents.components.cta
@@ -41,6 +42,9 @@ pub fn preprocess_file(mut file pathlib.Path) ! {
 				}
 				'header' {
 					processed << header.process(lines[action_begin..].join('\n'))!
+				}
+				'footer' {
+					processed << footer.process(lines[action_begin..].join('\n'))!
 				}
 				'hero' {
 					processed << hero.process(lines[action_begin..].join('\n'))!

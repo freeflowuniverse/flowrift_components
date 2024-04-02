@@ -1,10 +1,15 @@
 module footer
 
+import freeflowuniverse.webcomponents.components.header
+
+type FooterButton = header.LinkButton
+
 pub struct Footer {
 pub mut:
 	url          string   = '/'
 	logo         string   = 'Flowrift'
 	description  string   = 'Filler text is dummy text which has no meaning however looks very similar to real text.'
+	items []FooterButton
 	social_icons []Social = [
 		Social{
 			url: '#'
@@ -32,5 +37,5 @@ pub mut:
 }
 
 pub fn (component Footer) html() string {
-	return $tmpl('./templates/footer.html')
+	return $tmpl('./templates/io_footer.html')
 }
