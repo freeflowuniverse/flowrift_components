@@ -2,8 +2,8 @@
 {% block content %}
 
 <!-- home page template, has a banner and rows of page summaries -->
-<div class="">
-    {% set page = get_page(path="home/index.md") %}
+<div>
+    {% set page = get_page(path="home.md") %}
     {{page.content | safe}}
 </div>
 {% endblock content %}

@@ -16,19 +16,19 @@
 {% if split | length < 2 %} {% set content=page.content %} {% else %} {% set content="" %} {% for part in split %} {% if
   part is starting_with("/blog") %} {% set split_part=part | split(pat='/">' ) %} {% set link=split_part[0] %} {% set
   link=link | replace(from="/blog/post" , to="/blog" ) %} {% set link=link | replace(from="_" , to="-" ) %} {% set
-  rest_part=split_part | slice(start=1) | join(sep='/"' ) %} {% set part=link ~ '/">' ~ rest_part %} {% endif %} {% if
+  rest_part=split_part | slice(start=1) | join(sep='/">' ) %} {% set part=link ~ '/">' ~ rest_part %} {% endif %} {% if
   loop.first %} {% set_global content=part%} {% else %} {% set_global content=content ~ "threefold.io" ~ part%} {% endif
   %} {% endfor %} {% endif %} <main>
 
-  <div class="container mx-auto mt-2 lg:mt-20">
+  <div class="container mx-auto mt-10">
 
     <div>
       <article class="article lg:w-4/6 mx-auto">
-        <h1 class="lg:text-4xl text-2xl font-medium leading-none mt-0  text-gray-700">
+        <h1 class="lg:text-5xl text-2xl font-medium leading-none mt-0  text-gray-700">
           {{ page.title }}
         </h1>
 
-        <h4 class="lg:text-xl text-base text-gray-600 leading-8">
+        <h4 class="lg:text-2xl text-base text-gray-600 leading-8">
           {{ page.description }}
         </h4>
         <section class="post-author-list mb-3 mx-0">
@@ -72,6 +72,25 @@
         to=page.extra.imgPath)) %}
         <img class="mb-8 mx-auto" src={{img_url}} alt="{{page.title ~ 'Picture'}}">
         <div>{{ content | safe }}</div>
+        <section class="post-tags container relative py-10">
+          {% for tag in page.taxonomies.tags %}
+          {% set fullpath = "/tags/" ~ tag | replace(from='_', to='-' ) %}
+          <button class="
+          text-xs
+          bg-transparent
+          hover:text-blue-700
+          py-2
+          px-4
+          mr-2
+          border
+          hover:border-blue-500
+          border-gray-600
+          text-gray-700
+          rounded-full
+        "><a href="{{fullpath}}">{{ tag }}</a></button>
+
+          {% endfor %}
+        </section>
       </article>
     </div>
 

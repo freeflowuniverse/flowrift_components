@@ -1,6 +1,6 @@
 <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
   <div class="flex-1">
-    <a href={{ post.permalink }} class="block" style="pointer-events: none;">
+    <a href={{ post.permalink }} class="block">
       <div class="flex-shrink-0">
         {% if post.extra.imgPath %}
         {% set img_url = get_url(path='/' ~ post.relative_path | replace(from='_', to='-') | replace(from='index.md', to=post.extra.imgPath)) %}
@@ -46,12 +46,10 @@
         </ul>
       </div>
 
-      <p class="text-gray-700 text-s">
-        {% if post.extra.socialLinks.contact %}
-        <a href="{{ post.extra.socialLinks.contact }}" class="border-1 text-s font-bold border-gray-600 hover:text-blue-700 py-1 px-2 mr-2 my-1 border hover:border-blue-500 border-gray-600 text-gray-700 rounded-full" target="_blank">
-            <u>Read More</u>
-        </a>
-    {% endif %}
+      <p class="text-gray-700 text-xs">
+        <time datetime="{{post.date}}">
+          {{ post.date | date(format="%B %e, %Y", timezone="America/Chicago") }}
+        </time>
       </p>
     </div>
   </div>

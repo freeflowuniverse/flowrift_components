@@ -17,11 +17,13 @@ and a side nav for category and featured post navigation
         {%- set_global featured = page %}
         {% break %}
     {% endif %}
+    {% if not featured %} 
+        {%- set_global featured = section.pages[0] %}
+    {% endif %}
     {% endfor %}
     
-    {% include "partials/featuredBlog.html" %}
 
-    <div class="flex flex-col md:flex-row container mx-auto">
+    <div class="flex flex-col md:flex-row container mx-auto my-6">
         {% include "partials/blogPosts.html" %}
         {% include "partials/blogSidebar.html" %}
     </div>

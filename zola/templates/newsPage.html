@@ -34,14 +34,14 @@
 <!-- Default page template for news posts and basic informative markdown files -->
 <main>
 
-  <div class="container sm:pxi-0 mx-auto overflow-x-hidden pt-2 lg:pt-16 lg:w-4/6">
+  <div class="container sm:pxi-0 mx-auto overflow-x-hidden pt-16 lg:w-4/6">
 
     <div class="pt-8">
       <section class="post-header container mx-auto px-0 mb-4 border-b">
-        <h1 class="lg:text-4xl text-2xl font-medium leading-none mt-0">
+        <h1 class="lg:text-5xl text-2xl font-medium leading-none mt-0">
           {{ page.title }}
         </h1>
-        <div class="lg:text-xl text-base pt-4 pb-10 text-gray-700">{{ page.description }}</div>
+        <div class="lg:text-2xl text-base pt-4 pb-10 text-gray-700">{{ page.description }}</div>
       </section>
       <section class="post-author-list mb-10 mx-0">
         <div class="flex items-center">
@@ -120,6 +120,7 @@
       </section>
 
       <section class="post-tags container mx-auto relative py-10">
+        {% if page.taxonomies.tags %}
         {% for tag in page.taxonomies.tags %}
         {% set fullpath = "/tags/" ~ tag | replace(from='_', to='-' ) %}
         <a href="{{fullpath}}" class="
@@ -136,6 +137,7 @@
             rounded-full
           ">{{ tag }}</a>
         {% endfor %}
+        {% endif %}
       </section>
     </div>
   </div>
