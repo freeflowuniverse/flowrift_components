@@ -66,7 +66,6 @@ pub fn (menu DropdownButton) html() string {
 
 pub fn (header Header) html() string {
 	mut dropdown_buttons := []DropdownButton{}
-	println('debugzorty: ${header}')
 	for item in header.items {
 		if item is DropdownButton {
 			dropdown_buttons << item
