@@ -75,7 +75,7 @@
                 </nav>
                 <div class="mb-2 mt-8">
                   <h2 class="mt-2 text-base font-semibold leading-7 text-white sm:truncate sm:text-lg sm:tracking-tight">Script <span class="font-light bg-zinc-700 px-1 py-0.5 rounded-md ml-1">@{script.name}</span></h2> 
-                  <h2 class="mt-2 text-base font-semibold leading-7 text-white sm:truncate sm:text-lg sm:tracking-tight">Triggered by <span class="font-light bg-zinc-700 px-1 py-0.5 rounded-md ml-1"><span class="font-light bg-zinc-700 px-1 py-0.5 rounded-md">@{event.commit.committer}</span> @{event.action} <span class="font-light bg-zinc-700 px-1 py-0.5 rounded-md ml-1">@{event.commit.hash[event.commit.hash.len-7..]}</span> to <span class="font-light bg-zinc-700 px-1 py-0.5 rounded-md ml-1">@{repository.full_name()}</span></span></h2> 
+                  <h2 class="mt-2 text-base font-semibold leading-7 text-white sm:truncate sm:text-lg sm:tracking-tight">Triggered by <span class="font-light px-1 py-0.5 ml-1"><span class="font-light bg-zinc-700 px-1 py-0.5 rounded-md">@{event_subject}</span> @{event_action} <span class="font-light bg-zinc-700 px-1 py-0.5 rounded-md ml-1">@{event_object_name}</span> to <span class="font-light bg-zinc-700 px-1 py-0.5 rounded-md ml-1">@{repository.full_name()}</span></span></h2> 
                 </div>
                 <div class="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6">
                   <div class="mt-2 flex items-center text-sm text-zinc-300">
