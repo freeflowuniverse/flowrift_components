@@ -1,0 +1,23 @@
+<div class="mt-8 flow-root">
+    <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+        <table class="min-w-full divide-y divide-gray-700">
+          <thead>
+            <tr>
+              @for header in table.headers
+              <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-0">@{header}</th>
+              @end
+              <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-0">
+                <span class="sr-only">Edit</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-800">
+            @for row in table.rows
+              @{row.html()}
+            @end
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

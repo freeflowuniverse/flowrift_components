@@ -1,0 +1,10 @@
+<tr>
+  @for item in row.items
+  <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-white sm:pl-0">@{item}</td>
+  @end
+  @for button in row.buttons
+  <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+    <button method="PUT" action="@{button.route}" class="text-indigo-400 hover:text-indigo-300">@{button.label}<span class="sr-only">, @{button.route}</span></a>
+  </td>
+  @end
+</tr>

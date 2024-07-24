@@ -1,0 +1,11 @@
+<div class="sm:flex sm:items-center">
+    <div class="sm:flex-auto">
+      <h1 class="text-base font-semibold leading-6 text-white">@{heading.title}</h1>
+      <p class="mt-2 text-sm text-zinc-300">@{heading.description}</p>
+    </div>
+    <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none flex">
+      @for button in heading.buttons
+        @{button.html()}
+      @end
+    </div>
+</div>

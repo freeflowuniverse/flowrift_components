@@ -1,0 +1,13 @@
+<li class="col-span-1 divide-y divide-zinc-700 rounded-lg bg-zinc-800 shadow">
+    <a href="/card/${card.id}">
+    <div class="flex w-full items-center justify-between space-x-6 p-6">
+      <div class="flex-1 line-clamp-2">
+        <div class="flex items-center space-x-3">
+          <h3 class="truncate text-sm font-medium text-white">@{card.name}</h3>
+          <span class="inline-flex flex-shrink-0 items-center rounded-full bg-green-50 px-1.5 py-0.5 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">@{card.category}</span>
+        </div>
+        <p class="mt-1 line-clamp-2 text-sm text-zinc-400">@{card.description}</p>
+      </div>
+    </div>
+  </a>
+  </li>
