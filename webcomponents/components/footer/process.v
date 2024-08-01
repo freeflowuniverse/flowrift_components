@@ -10,8 +10,8 @@ const actor = 'flowrift'
 pub fn process(txt string) !string {
 	mut plbook := playbook.new(text: txt)!
 
-	if plbook.action_exists_once(actor: footer.actor, name: 'footer') {
-		a := plbook.action_get_by_name(actor: footer.actor, name: 'footer')!
+	if plbook.action_exists(actor: footer.actor, name: 'footer') {
+		a := plbook.action_get(actor: footer.actor, name: 'footer')!
 
 		// mut mode := a.params.get_default('mode', 'horizontal')!
 		// mode = mode.to_lower()
@@ -37,7 +37,7 @@ pub fn process(txt string) !string {
 			// description: a.params.get('description')!
 			// mode: mode_enum
 		}
-		for item in plbook.actions_find_by_name(actor: footer.actor, name: 'footer_item')! {
+		for item in plbook.actions_find(actor: footer.actor, name: 'footer_item')! {
 			item_type := item.params.get_default('type', '')! // if no date then empty date
 			
 			label := item.params.get_default('label', '')!

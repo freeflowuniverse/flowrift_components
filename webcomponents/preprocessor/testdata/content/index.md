@@ -1,6 +1,6 @@
 # My test markdown content
 
-here we have some markdown and some macros in 3script
+here we have some markdown and some macros in heroscript
 
 ## Reviews Macro
 

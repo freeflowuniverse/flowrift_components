@@ -9,8 +9,8 @@ const actor = 'flowrift'
 pub fn process(txt string) !string {
 	mut plbook := playbook.new(text: txt)!
 
-	if plbook.action_exists_once(actor: cta.actor, name: 'cta') {
-		a := plbook.action_get_by_name(actor: cta.actor, name: 'cta')!
+	if plbook.action_exists(actor: cta.actor, name: 'cta') {
+		a := plbook.action_get(actor: cta.actor, name: 'cta')!
 		mut d := a.params.decode[CTA]()!
 		return process_from_model(d)!
 	}

@@ -1,7 +1,7 @@
 # Web Components
 
 Web Components in V that can be rendered into HTML, for use in MDBook and Zola Static sites.
-The end goal is to easily and readably go from Markdown (using 3Script) to rendered web components.
+The end goal is to easily and readably go from Markdown (using heroscript) to rendered web components.
 
 For example:
 ```
@@ -66,7 +66,7 @@ bash doc.sh
 
 **You can skip installing hero for now, this part is under development.**
 
-hero is our "hero" tool to execute 3script, deal with git, ...
+hero is our "hero" tool to execute heroscript, deal with git, ...
 
 ```bash
 curl https://raw.githubusercontent.com/freeflowuniverse/webcomponents/development/scripts/hero_install.sh > /tmp/hero_install.sh

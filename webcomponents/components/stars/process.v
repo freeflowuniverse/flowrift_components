@@ -39,8 +39,8 @@ pub fn get(total int, nr int) !string {
 pub fn process(txt string) !string {
 	mut plbook := playbook.new(text: txt)!
 
-	if plbook.action_exists_once(actor: stars.actor, name: 'stars') {
-		a := plbook.action_get_by_name(actor: stars.actor, name: 'stars')!
+	if plbook.action_exists(actor: stars.actor, name: 'stars') {
+		a := plbook.action_get(actor: stars.actor, name: 'stars')!
 		mut d := Stars{
 			total: a.params.get_int_default('total', 5)!
 			stars: a.params.get_int_default('stars', 3)!

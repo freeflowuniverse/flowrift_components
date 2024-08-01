@@ -9,8 +9,8 @@ pub fn process(txt string) !string {
 	// image_path:=a.params.get('image')!
 	// mut image:=image.new(path:image_path)!
 
-	// if plbook.action_exists_once(actor: newsletter.actor, name: 'newsletter') {
-	// 	a := plbook.action_get_by_name(actor: newsletter.actor, name: 'newsletter')!
+	// if plbook.action_exists(actor: newsletter.actor, name: 'newsletter') {
+	// 	a := plbook.action_get(actor: newsletter.actor, name: 'newsletter')!
 	// 	mut d := NewsLetter{
 	// 		description: a.params.get_default('description', 'Get the latest updates')!
 	// 		signup : a.params.get_default('signup', 'Sign up for our newsletter')!
