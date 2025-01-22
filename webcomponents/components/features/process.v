@@ -1,6 +1,6 @@
 module features
 
-import freeflowuniverse.crystallib.core.playbook
+import freeflowuniverse.herolib.core.playbook
 
 const actor = 'flowrift'
 

@@ -1,8 +1,8 @@
 module tailwind
 
-import freeflowuniverse.crystallib.installers.web.tailwind as tailwindinstaller
-import freeflowuniverse.crystallib.core.pathlib
-import freeflowuniverse.crystallib.osal
+import freeflowuniverse.herolib.installers.web.tailwind as tailwindinstaller
+import freeflowuniverse.herolib.core.pathlib
+import freeflowuniverse.herolib.osal
 
 pub struct TailWind {
 pub mut:
@@ -58,7 +58,7 @@ pub fn new(args TailWindArgs) !TailWind {
 pub fn (tw TailWind) compile() ! {
 	// source the go path
 	cmd := '
-		source ${osal.profile_path()}
+		source ${osal.profile_path()!}
 		cd ${tw.path.path}
 		tailwind -i input.css -o output.css --minify
 		'

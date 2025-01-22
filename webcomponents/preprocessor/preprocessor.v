@@ -7,7 +7,7 @@ import freeflowuniverse.webcomponents.components.footer
 import freeflowuniverse.webcomponents.components.hero
 import freeflowuniverse.webcomponents.components.form.contact
 import freeflowuniverse.webcomponents.components.cta
-import freeflowuniverse.crystallib.core.pathlib
+import freeflowuniverse.herolib.core.pathlib
 
 pub fn preprocess(path_ string) ! {
 	mut path := pathlib.get(path_)

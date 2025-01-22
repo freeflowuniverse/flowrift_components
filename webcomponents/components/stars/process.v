@@ -1,6 +1,6 @@
 module stars
 
-import freeflowuniverse.crystallib.core.playbook
+import freeflowuniverse.herolib.core.playbook
 
 pub struct Stars {
 pub:

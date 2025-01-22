@@ -1,5 +1,5 @@
 #!/usr/bin/env -S v -w -cg -enable-globals run
-import freeflowuniverse.crystallib.ui.console
+import freeflowuniverse.herolib.ui.console
 import freeflowuniverse.webcomponents.components.form.contact as webcomponent
 import freeflowuniverse.webcomponents
 

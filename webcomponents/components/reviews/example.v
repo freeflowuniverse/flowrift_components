@@ -1,6 +1,6 @@
 module reviews
 
-import freeflowuniverse.crystallib.core.texttools
+import freeflowuniverse.herolib.core.texttools
 
 pub fn example_data() string {
 	t := 'This is a section of some simple filler text...'

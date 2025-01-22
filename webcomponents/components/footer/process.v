@@ -1,8 +1,8 @@
 module footer
 
 import freeflowuniverse.webcomponents.components.header
-import freeflowuniverse.crystallib.core.playbook
-import freeflowuniverse.crystallib.data.ourtime
+import freeflowuniverse.herolib.core.playbook
+import freeflowuniverse.herolib.data.ourtime
 import freeflowuniverse.webcomponents.components.stars
 
 const actor = 'flowrift'

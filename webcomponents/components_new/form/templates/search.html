@@ -1,0 +1,8 @@
+<style>
+    #search {
+        border-radius: 5px;
+    }
+</style>
+<form id="search-form" action="@{input.route}" method="GET" up-target="#table">
+    <input id="search" type="search" name="search" placeholder="Search documents" value="" up-delay="0.2s" up-autosubmit>
+</form>

@@ -1,7 +1,7 @@
 module image
 
-import freeflowuniverse.crystallib.core.playbook
-import freeflowuniverse.crystallib.core.pathlib
+import freeflowuniverse.herolib.core.playbook
+import freeflowuniverse.herolib.core.pathlib
 
 pub struct Image {
 pub mut:

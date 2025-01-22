@@ -14,7 +14,7 @@ import freeflowuniverse.webcomponents.components.footer
 import freeflowuniverse.webcomponents.components.form
 import freeflowuniverse.webcomponents.components.signup
 import vweb
-import freeflowuniverse.crystallib.ui.console
+import freeflowuniverse.herolib.ui.console
 
 // ComponentsApp is a VWeb application that displays rendered components
 pub struct ComponentsApp {

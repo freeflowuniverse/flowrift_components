@@ -1,0 +1,18 @@
+<style>
+    #page-heading > hgroup {
+        margin-bottom: 0px;
+    }
+
+    #page-heading > hgroup > h1 {
+        margin-bottom: 8px
+    }
+</style>
+<header id="page-heading" class="grid" style="grid-template-columns: 2fr 1fr; gap: 5rem">
+    <hgroup>
+        <h1>@{heading.title}</h1>
+        @{subtitle}
+        @{breadcrumbs_html}
+    </hgroup>
+    @{buttons}
+</header>
+<hr>

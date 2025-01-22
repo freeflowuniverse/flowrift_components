@@ -1,6 +1,6 @@
 module newsletter
 
-// import freeflowuniverse.crystallib.data.ourtime
+// import freeflowuniverse.herolib.data.ourtime
 
 pub struct NewsLetter {
 pub:

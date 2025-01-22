@@ -1,6 +1,6 @@
 module banner
 
-import freeflowuniverse.crystallib.core.texttools
+import freeflowuniverse.herolib.core.texttools
 
 pub fn example_data() string {
 	c := "
